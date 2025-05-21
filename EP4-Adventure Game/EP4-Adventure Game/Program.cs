@@ -7,9 +7,9 @@ namespace EP4_Adventure_Game
     {
         // This should allow the change to stay after choice is made after GameStart
 
-          static  bool largeShell = false;
-          static  bool shellHandful = false;
-          static  bool clamandMuscles = false
+        static  bool largeShell = false;
+        static  bool shellHandful = false;
+        static bool clamandMuscles = false;
 
         static void Main(string[] args)
         {
@@ -54,12 +54,14 @@ namespace EP4_Adventure_Game
                     largeShell = true;
                     Console.WriteLine("You head back to your shack with your large shell in hand");
                     GameStart();
+                    return;
                 }
 
                 if (choice == "2")
                 {
                     Console.WriteLine("You decide to head back to the shack and find another location to head to");
                     GameStart();
+                    return;
                 }
             }
 
@@ -77,6 +79,7 @@ namespace EP4_Adventure_Game
                     Console.WriteLine("You don't find any shells, but at least it was pretty!");
                     Console.WriteLine("You head back to the shack hopeful that a new location might have shells you can grab");
                     GameStart();
+                    return;
                 }
 
                 if (choice == "2")
@@ -86,6 +89,7 @@ namespace EP4_Adventure_Game
                     shellHandful = true;
                     Console.WriteLine("Pack feeling full you head back to your shack");
                     GameStart();
+                    return;
                 }
             }
 
@@ -97,6 +101,7 @@ namespace EP4_Adventure_Game
                 clamandMuscles = true;
                 Console.WriteLine("You head back to your shack feeling confident in todays findings");
                 GameStart();
+                return;
 
             }
 
@@ -168,6 +173,7 @@ namespace EP4_Adventure_Game
                     {
                         Console.WriteLine("Thank you for playing!");
                     }
+                    return;
                 }
             }
 
